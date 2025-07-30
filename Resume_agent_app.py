@@ -21,6 +21,8 @@ from langchain.memory import ConversationBufferMemory
 # Load environment variables
 load_dotenv()
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai_key = st.secrets["OPENAI_API_KEY"]
+
 
 # 📎 Manual case study URL map
 case_study_links = {
