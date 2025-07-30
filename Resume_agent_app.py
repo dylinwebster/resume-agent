@@ -5,6 +5,10 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import streamlit as st
+import openai
+import streamlit as st
+
+
 
 from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
@@ -16,7 +20,7 @@ from langchain.memory import ConversationBufferMemory
 
 # Load environment variables
 load_dotenv()
-openai_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # 📎 Manual case study URL map
 case_study_links = {
@@ -247,7 +251,7 @@ st.markdown(
 
 
 with st.sidebar:
-    st.image("docs/headshot_color.jpg", use_container_width=True)
+    st.image("docs/Headshot_Color.JPG", use_container_width=True)
     st.markdown("### Dylin Webster")
     st.markdown("📍 SaaS Exec | Customer Experience Leader")
     st.markdown("---")  # adds a horizontal line to separate sections
