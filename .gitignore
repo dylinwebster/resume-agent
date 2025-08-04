@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Python venv
+.venv/
+
+# Local dotenv
+.env
+
+# Streamlit local secrets
+.streamlit/secrets.toml
